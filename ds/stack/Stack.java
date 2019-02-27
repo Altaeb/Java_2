@@ -10,13 +10,24 @@ public class Stack {
         this.top=-1;
     }
     public void push(long j){
-        top++;
-        stackArray[top]=j;
-    }
-    public long pop(){
-        int old_top=top;
-        top--;
-        return stackArray[old_top];
+        if(isFull()){
+            System.out.println("this stack is already full");}
+        else{
+            top++;
+            stackArray[top]=j;
+        }}
+    public long pop()
+    {
+        if (isEmpty()) {
+            System.out.println("the stack is already empty");
+            return -1 ;
+        }
+        else{
+
+            int old_top=top;
+            top--;
+            return stackArray[old_top];
+        }
     }
     public long peak(){
         return stackArray[top];
