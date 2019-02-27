@@ -2,25 +2,25 @@ package ds.stack;
 
 public class Stack {
     private int maxSize;
-    private long[] stackArray ;
+    private char[] stackArray ;
     private int top;
     public Stack(int size){
         this.maxSize=size;
-        this.stackArray=new long[maxSize];
+        this.stackArray=new char[maxSize];
         this.top=-1;
     }
-    public void push(long j){
+    public void push(char j){
         if(isFull()){
             System.out.println("this stack is already full");}
         else{
             top++;
             stackArray[top]=j;
         }}
-    public long pop()
+    public char pop()
     {
         if (isEmpty()) {
             System.out.println("the stack is already empty");
-            return -1 ;
+            return'0' ;
         }
         else{
 
@@ -29,7 +29,7 @@ public class Stack {
             return stackArray[old_top];
         }
     }
-    public long peak(){
+    public char peak(){
         return stackArray[top];
     }
     public boolean isEmpty(){
