@@ -8,14 +8,29 @@ public class App {
         //  theStack.push(60);
         //  theStack.push(80);
 
-        while (!theStack.isEmpty()) {
-            long value = theStack.pop();
-            System.out.println(value);
+ /*          while (!theStack.isEmpty()) {
+               long value = theStack.pop();
+               System.out.println(value);
 
-        }
+           }*/
+        System.out.println(reverseString("HELLO"));
 
     }
     public static String reverseString(String str){
-        return str;
+        int stackSize = str.length(); //get the max stack size
+        Stack theStack=new Stack(stackSize); //we make the stack
+        for (int j = 0; j < str.length(); j++)
+        {char ch = str.charAt(j);  //getting a char from input string
+            theStack.push(ch);
+
+        }
+        String result="";
+        while (!theStack.isEmpty()) {
+            char ch = theStack.pop();
+            result=result+ch ; // appending to the output
+
+        }
+        return result;
+
     }
 }
