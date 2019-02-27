@@ -3,13 +3,16 @@ public class Human {
     int age;
     int higthInInches;
     String Color;
-    public Human(){
 
-        name="Abdalfayyah Altaeb";
-        age=24;
-        Color="Green";
-        higthInInches=105;
+    public Human(String name, int age, int higthInInches, String Color) {
+        this.name = name;
+        this.age = age;
+        this.higthInInches = higthInInches;
+        this.Color = Color;
     }
+
+
+
     public void speak(){
         System.out.println("My name is "+name);
         System.out.println("I am "+age+" years old");
