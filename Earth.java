@@ -1,3 +1,4 @@
+/*
 public class Earth {
     public static void main(String[] args) {
 
@@ -9,3 +10,4 @@ public class Earth {
             human3.speak();
         }
 }
+*/
